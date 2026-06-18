@@ -13,3 +13,17 @@
 </ul>
 
 <hr>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Teléfonos</th>
+  </tr>
+  {% for e in estudiantes %}
+  <tr>
+    <td>{{ e.id }}</td>
+    <td>{{ e.nombre }}</td>
+    <td>{{ e.mis_numeros_telefonicos.count }}</td>
+  </tr>
+  {% endfor %}
+</table>
