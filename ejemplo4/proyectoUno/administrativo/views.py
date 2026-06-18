@@ -107,3 +107,6 @@ def eliminar_pais(request, id):
     pais = Pais.objects.get(pk=id)
     pais.delete()
     return redirect(index)
+def obtener_pais(request, id):
+    pais = Pais.objects.get(pk=id)
+    return render(request, 'obtenerPais.html', {'pais': pais})

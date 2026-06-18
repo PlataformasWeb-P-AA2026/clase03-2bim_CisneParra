@@ -21,10 +21,8 @@ Número de paises {{ numero_paises }}
 <ul>
 {% for p in paises %}
   <li>
-    {{ p }} - 
-    [<a href="{% url 'eliminar_pais' p.id %}" 
-      onclick="return confirm('¿Está seguro de la eliminación?')">
-      eliminar</a>]
+    {{ p.nombre }} - 
+    [<a href="{% url 'obtener_pais' p.id %}">ver</a>]
   </li>
 {% endfor %}
 </ul>
